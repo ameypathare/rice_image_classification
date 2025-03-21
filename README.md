@@ -1,52 +1,104 @@
-Overview Of Code:
-<br>
+${\color{red}Overview \space of \space code}$  
+- **The project is executed in a local environment using TensorFlow and Keras for deep learning.**  
+  - **Dataset Source:** Kaggle – *Rice Image Dataset*  
+  - **Data Organization:**  
+    - Images are organized into folders based on class labels.  
+  - **Process Overview:**  
+    - Data is loaded, preprocessed, and trained using a custom CNN model.  
 
-The project involves classifying different types of rice grains using deep learning.
+---
 
-Dataset used: Murat Koklu's Rice Image Dataset
-Loaded image dataset from local storage
-Extracted image class names dynamically
-Displayed sample images from each class <br>
-Data Preprocessing
+${\color{red}Data \space Preparation}$  
 
-${\color{red}Null \space Handling \space used:}$
+- **Loaded image files from local directories.**  
+- **Created a DataFrame containing image paths and labels.**  
+- **Shuffled data to ensure randomness in training.**  
 
-Checked for missing labels
-Ensured all images have a valid class
-${\color{red}Duplicate \space Handling \space used}$
+---
 
-Checked for duplicate images (if any)
-${\color{red}Image \space Preprocessing}$
+${\color{red}Data \space Cleaning}$   
 
-Rescaled images to (224, 224)
-Normalized pixel values (rescale=1.0/255) <br>
-Performed Exploratory Data Analysis (EDA)
+### **Null Handling used:**  
+- `isnull()`  
+- `notnull()`  
+- `dropna()`  
+- `fillna(value)`
 
-Visualized sample images from each rice class
-Checked class distribution <br>
-Charts used
+### **Duplicate Handling used:**  
+- `drop_duplicates()`  
 
-BarChart (Class Distribution)
-Sample Image Grid <br>
-Train-Test Split
+---
 
-Split data into training, validation, and test sets <br>
-Model Development
+${\color{red}Data \space Preprocessing}$   
 
-Used a custom CNN model
-Applied Conv2D, MaxPooling2D, BatchNormalization, Dropout
-Implemented categorical cross-entropy loss function <br>
-Training Process
+- **Rescaled image pixel values** using `ImageDataGenerator`.  
+- **Defined image size:** *(224x224)*.  
+- **Used batch processing** with `batch_size=16`.  
 
-Used ModelCheckpoint for saving the best model
-Applied ReduceLROnPlateau for learning rate adjustment
-Trained the model for 10 epochs <br>
-Charts used for model evaluation
+---
 
-Accuracy vs Epochs
-Loss vs Epochs
-Learning Rate vs Epochs <br>
-Model Evaluation
+${\color{red}EDA}$   
 
-Generated classification report
-Plotted confusion matrix <br>
+- **Displayed sample images from each class.**  
+- **Plotted image count distribution per class.**  
+
+---
+
+${\color{red}Visualization}$    
+
+- **Bar Chart** – Visualized class distribution.  
+- **Box Plot** – Analyzed pixel intensity variations.  
+- **Pairplot** – Checked image feature relationships.  
+- **Heatmap** – Displayed confusion matrix for model evaluation.  
+
+---
+
+${\color{red}Modelling}$   
+
+### **Custom CNN Model**  
+- **Input shape:** `(224, 224, 3)`  
+- **Layers Used:**  
+  - `Conv2D` and `MaxPooling2D` for feature extraction.  
+  - `BatchNormalization` to stabilize learning.  
+  - `Dropout` to prevent overfitting.  
+- **Output layer:** Uses `Softmax` activation for multi-class classification.  
+
+---
+
+## *Model Training*  
+
+- **Loss function:** `CategoricalCrossentropy`  
+- **Optimizer:** `Adadelta` with `learning_rate=0.01`  
+- **Training Enhancements:**  
+  - `ModelCheckpoint` – Saves the best model.  
+  - `ReduceLROnPlateau` – Adjusts learning rate dynamically.  
+
+---
+
+## *Performance Evaluation*  
+
+- **Accuracy Plot** – Compared training and validation accuracy.  
+- **Loss Plot** – Visualized loss trends over epochs.  
+- **Learning Rate Plot** – Monitored changes in learning rate.  
+
+---
+
+## *Testing & Predictions*  
+
+- **Generated predictions on test data.**  
+- **Created a classification report** with *precision, recall, and F1-score*.  
+- **Displayed sample test images** with predicted labels and confidence scores.  
+
+---
+
+## *Model Evaluation*  
+
+- **Confusion Matrix** – Analyzed classification performance.  
+- **Identified misclassified images** to assess model weaknesses.  
+
+---
+
+## *Final Outcome*  
+
+- **Successfully classified different rice types with high accuracy.**  
+- **Improved model generalization** using *data augmentation and regularization techniques.*  
