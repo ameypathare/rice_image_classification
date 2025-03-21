@@ -1,4 +1,7 @@
-${\color{red}Overview \space of \space code}$  
+## rice_image_classification
+
+$${\color{lightgreen}Overview \space Of \space Code:}$$
+<br>
 - **The project is executed in a local environment using TensorFlow and Keras for deep learning.**  
   - **Dataset Source:** Kaggle – *Rice Image Dataset*  
   - **Data Organization:**  
