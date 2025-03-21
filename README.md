@@ -97,7 +97,7 @@ ${\color{red}Modelling}$
 - **Identified misclassified images** to assess model weaknesses.  
 
 
-## *Final Outcome*  
+### *Final Outcome*  
 
 - Successfully classified different rice types with high accuracy. 
 - Improved model generalization using data augmentation and regularization techniques.  
