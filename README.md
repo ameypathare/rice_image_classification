@@ -67,7 +67,7 @@ ${\color{red}Modelling}$
 - Output layer: Uses Softmax activation for multi-class classification.  
 
 
-## *Model Training*  
+### *Model Training*  
 
 - Loss function: CategoricalCrossentropy
 - Optimizer: Adadelta with learning_rate=0.01
@@ -76,7 +76,7 @@ ${\color{red}Modelling}$
   - ReduceLROnPlateau – Adjusts learning rate dynamically.  
 
 
-## *Performance Evaluation*  
+### *Performance Evaluation*  
 
 - Accuracy Plot – Compared training and validation accuracy.  
 - Loss Plot** – Visualized loss trends over epochs.  
@@ -84,14 +84,14 @@ ${\color{red}Modelling}$
 
 
 
-## *Testing & Predictions*  
+### *Testing & Predictions*  
 
 - Generated predictions on test data. 
 - Created a classification report with precision, recall and F1-score.  
 - Displayed sample test images with predicted labels and confidence scores.  
 
 
-## *Model Evaluation*  
+### *Model Evaluation*  
 
 - **Confusion Matrix** – Analyzed classification performance.  
 - **Identified misclassified images** to assess model weaknesses.  
