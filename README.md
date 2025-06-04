@@ -1,6 +1,6 @@
 ## rice_image_classification
 
-$${\color{lightgreen}Overview \space Of \space Code:}$$
+$${Overview \space Of \space Code:}$$
 <br>
 - **The project is executed in a local environment using TensorFlow and Keras for deep learning.**  
   - **Dataset Source:** Kaggle – *Rice Image Dataset*  
@@ -19,7 +19,7 @@ ${Data \space Preparation}$
 
 ---
 
-${\color{red}Data \space Cleaning}$   
+${Data \space Cleaning}$   
 
 ### **Null Handling used:**  
 - isnull()  
@@ -32,7 +32,7 @@ ${\color{red}Data \space Cleaning}$
 
 ---
 
-${\color{red}Data \space Preprocessing}$   
+${Data \space Preprocessing}$   
 
 - **Rescaled image pixel values** using ImageDataGenerator.  
 - **Defined image size:** (224x224.  
@@ -40,14 +40,14 @@ ${\color{red}Data \space Preprocessing}$
 
 ---
 
-${\color{red}EDA}$   
+${EDA}$   
 
 - Displayed sample images from each class. 
 - Plotted image count distribution per class.  
 
 ---
 
-${\color{red}Visualization}$    
+${Visualization}$    
 
 - Bar Chart – Visualized class distribution.  
 - Box Plot – Analyzed pixel intensity variations.  
@@ -56,7 +56,7 @@ ${\color{red}Visualization}$
 
 ---
 
-${\color{red}Modelling}$   
+${Modelling}$   
 
 ### **Custom CNN Model**  
 - Input shape: (224, 224, 3) 
