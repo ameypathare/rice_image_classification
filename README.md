@@ -11,7 +11,7 @@ $${\color{lightgreen}Overview \space Of \space Code:}$$
 
 ---
 
-${\color{red}Data \space Preparation}$  
+${Data \space Preparation}$  
 
 - **Loaded image files from local directories.**  
 - **Created a DataFrame containing image paths and labels.**  
